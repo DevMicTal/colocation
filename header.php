@@ -3,6 +3,6 @@
     <head>
         <meta charset="utf-8" />
         <title><?php if(isset($titreDePage)) echo $titreDePage . $prefixeTitrePage; ?></title>
-        <!-- faire appel style.css -->
+        <link href="style.css" rel="stylesheet" media="all" type="text/css"> 
     </head>
     <body>
