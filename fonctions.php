@@ -19,16 +19,16 @@
         } 
 
 
-        $req = "CREATE TABLE IF NOT EXISTS news (
-            ID INT(11) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
-            titre TEXT(10000) NOT NULL,
-            contenu TEXT(10000) NOT NULL,
-            lien_vers_img TEXT(500),
-            date_ajout TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+        $req = "CREATE TABLE IF NOT EXISTS personne (
+            numPersonne INT(11) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            nom TEXT(10000) NOT NULL,
+            prenom TEXT(10000) NOT NULL,
+            email TEXT(500),
+            mdp TEXT(500)
         )";
 
         if ($conn->query($req) === FALSE) {
-            echo "Erreur lors de la creation de la table news : " . $conn->error;
+            echo "Erreur lors de la creation de la table personnes : " . $conn->error;
         }
 
         return $conn;

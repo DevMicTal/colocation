@@ -2,7 +2,7 @@
         $titreDePage = "Accueil";
         include("header.php"); ?>
 
-        <h1>Liste des logements disponible : </h1>
+        <h1>Liste des logements disponibles : </h1>
 
 <?php
 
