@@ -1,0 +1,9 @@
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+}
+input.form-control.email-login-colocation {
+    width: 300px;
+}
+input.form-control.password-login-colocation {
+    width: 220px;
+}
