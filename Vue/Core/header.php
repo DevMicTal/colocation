@@ -26,7 +26,7 @@
 
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
+                    <span class="sr-only">Basculement de la navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -38,19 +38,18 @@
 
 
                 <li class="dropdown">
-                    <?php // Je vais faire ici une condition si on est connecter ou pas pour caché ou afficher se connecter ou tableau de bord ... */ ?>
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>
-                        <?php if(!isset($_SESSION['email'])) { ?> Connection/Inscription <?php } else { ?> Mon compte (<?php echo $_SESSION['email']; ?>)<?php } ?> <b class="caret"></b>
+                        <?php if(!isset($_SESSION['email'])) { ?> Connexion/Inscription <?php } else { ?> Mon compte (<?php echo $_SESSION['email']; ?>)<?php } ?> <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
                         
                         <?php if(!isset($_SESSION['email']))
                         { ?>
                             <li>
-                                <a href="<?php echo lien_vers_connexion() ?>"><i class="fa fa-fw fa-user"></i> Se connecter</a>
+                                <a href="<?php echo lien_vers_connexion() ?>"><i class="fa fa-fw fa-sign-in"></i> Se connecter</a>
                             </li>
                             <li>
-                                <a href="<?php echo lien_vers_inscription() ?>"><i class="fa fa-fw fa-user"></i> S'inscrire</a>
+                                <a href="<?php echo lien_vers_inscription() ?>"><i class="fa fa-fw fa-sign-in"></i> S'inscrire</a>
                             </li>
                         <?php 
                         }
@@ -61,7 +60,7 @@
                                 <a href="<?php echo lien_vers_dashboard(); ?>"><i class="fa fa-fw fa-envelope"></i> Tableau de bord</a>
                             </li>
                             <li>
-                                <a href="#"><i class="fa fa-fw fa-gear"></i> Paramètres</a>
+                                <a href="<?php echo lien_vers_parametre(); ?>"><i class="fa fa-fw fa-gear"></i> Paramètres</a>
                             </li>
                             <li class="divider"></li>
                             <li>
@@ -72,22 +71,25 @@
                         
                     </ul>
                 </li>
+                         <!--   <span style="search"><span>Rechercher</span> <i class="glyphicon glyphicon-search"></i></span> !-->
             </ul>
-
+            
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li class="active">
-                        <a href="<?php echo lien_vers_accueil() ?>"><i class="fa fa-fw fa-dashboard"></i> Accueil</a>
+                        <a href="<?php echo lien_vers_accueil() ?>"><i class="fa fa-fw fa-home"></i> Accueil</a>
                     </li>
                     
                     <?php if(!isset($_SESSION['email']))
                     { ?>
                         <li>
-                            <a href="<?php echo lien_vers_inscription() ?>"><i class="fa fa-fw fa-bar-chart-o"></i> S'inscrire</a>
+                            <a href="<?php echo lien_vers_inscription() ?>"><i class="fa fa-fw fa-sign-in"></i> S'inscrire</a>
                         </li>
                     <?php 
                     } ?>
-                    
+                    <li>
+                        <a href="<?php echo lien_vers_ajout_annonce_logement() ?>"><i class="fa fa-fw fa-dashboard"></i> Déposer une annonce</a>
+                    </li>
                     <li>
                         <a href="<?php echo lien_vers_credits() ?>"><i class="fa fa-fw fa-dashboard"></i> Crédits</a>
                     </li>

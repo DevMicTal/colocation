@@ -10,14 +10,14 @@
         $dbname = $ma_config['dbname'];
 
         $conn = mysqli_connect($host, $user, $passwd, $dbname);
-
+        $conn->set_charset("utf8");
         if ($conn->connect_error)
         {
             die("Connexion échoué : " . $conn->connect_error);
         } 
 
         /* La création de table à étais faite, je met donc cette portion de code en commentaire */
-        /*
+        
         $req = "CREATE TABLE IF NOT EXISTS personne
         (
             num_personne INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -35,12 +35,14 @@
         $req = "CREATE TABLE IF NOT EXISTS annonce_logement
         (
             num_annonce_logement INT unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            titre TEXT(255) NOT NULL,
             description TEXT(10000) NOT NULL,
-            prix TEXT(10000) NOT NULL,
-            surface TEXT(500),
+            adresse TEXT(1000) NOT NULL,
+            prix INT NOT NULL,
+            surface INT NOT NULL,
             debut_disponibilite DATE NOT NULL,
             fin_disponibilite DATE NOT NULL,
-            nb_personne INT,
+            nb_personne INT NOT NULL,
             num_personne_ID INT,
             FOREIGN KEY (num_personne_ID) REFERENCES personne(num_personne)
         )";
@@ -51,7 +53,7 @@
             echo "Erreur lors de la creation de la table annonce_logement : " . $conn->error;
             echo '</div>';
         }
-        */
+        
         return $conn;
     }
 

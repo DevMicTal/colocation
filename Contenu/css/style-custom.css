@@ -1,9 +1,119 @@
 h1, h2, h3, h4, h5, h6 {
     color: #ffffff;
 }
-input.form-control.email-login-colocation {
-    width: 300px;
+textarea.input-lg,
+select[multiple].input-lg {
+  resize: vertical;
 }
-input.form-control.password-login-colocation {
-    width: 220px;
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
 }
+.alert-danger {
+  border-color: #ebccd1;
+}
+p {
+  color:#ffffff;
+}
+.alert-info {
+  border-color: #bce8f1;
+  background-color:#d9edf7;
+}
+p {
+  color:#31708f;
+}
+label.label_logement {
+  display: inline-block;
+  max-width: 100%;
+  color: #999999;
+  text-transform: uppercase;
+  margin: 5px 0 1px;
+  font-weight: inherit;
+}
+span.compteur_char {
+  color: #999999;
+  display:inline-block;
+  margin-top:3px;
+}
+.display-2 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.1;
+    border-bottom: 1px solid #eceeef;
+}
+
+
+
+/* ANNONCE */
+.description{
+  color:#000000;
+  padding-right: 150px;
+}
+.prix {
+  font-size: 35px;
+  float:right;
+  
+  
+}
+.titre{
+  color:#31708f;
+}
+h1 .titre{
+  color:#31708f;
+}
+.panel-default {
+    border-color: #ddd;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+/* ANNONCE FULL */
+
+.prix_full, .adresse_full, .surface_full, .nbpersonne_full, .debutdispo_full, .findispo_full, .email_full {
+  color:#ffffff;
+}
+.description_full {
+  padding-right:150px;
+}
+.jumbotron {
+  background-color: #222222;
+  padding-left: 15px;
+}
+
+.jumbotron h1 {
+  color:white;
+}
+table.table {
+  color: grey;
+  background-color: rgba(27, 27, 27, 0.32);
+}
+.table>tbody>tr>th, .table>tbody>tr>td {
+  border-top: 0px;
+}
+/* CREDITS */
+
+.credits {
+  margin-left: 45px;
+}
+h2 {
+    margin-left: 45px;
+    padding-top: 30px;
+    padding-bottom: 15px;
+}
+/* CODE POUR LE SEARCH https://bootsnipp.com/snippets/featured/full-screen-search */ 
+/* DEBUT GENERAL */
+html {
+  min-height: 100vh;
+}
+/* FIN GENERAL */
+
+/* DEBUT FOOTER */
+footer {
+  margin-top: 50px;
+  color:#676b67;
+  position: relative;
+  bottom: 20px;
+}
+/* FIN FOOTER */

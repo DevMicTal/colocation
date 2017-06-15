@@ -5,6 +5,7 @@
     include("Modele.php");
     /* Voir si je met cette include dans le ControleurPersonne */
     include(__DIR__."/../Modele/Personne.php");
+    include(__DIR__."/../Modele/AnnonceLogement.php");
 
     include(__DIR__."/../Controleur/ControleurAccueil.php");
     include(__DIR__."/../Controleur/ControleurAnnonceLogement.php");
@@ -34,11 +35,6 @@
     {
         return "/bts-sio/colocation/Vue/Personne/inscription.php";
     }
-    
-    function lien_vers_annonce_logement()
-    {
-        return "/bts-sio/colocation/Vue/AnnonceLogement/index.php";
-    }
 
     function lien_vers_credits()
     {
@@ -55,5 +51,18 @@
         return "/bts-sio/colocation/Vue/Personne/dashboard.php";
     }
     
+    function lien_vers_parametre()
+    {
+        return "/bts-sio/colocation/Vue/Personne/parametre.php";
+    }
     
+    function lien_vers_ajout_annonce_logement()
+    {
+        return "/bts-sio/colocation/Vue/AnnonceLogement/ajoutAnnonceLogement.php";
+    }
+    
+    function lien_vers_annonce_logement($num_annonce_logement)
+    {
+        return "/bts-sio/colocation/Vue/AnnonceLogement/index.php?num_annonce_logement=$num_annonce_logement";
+    }
 ?>

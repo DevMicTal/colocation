@@ -5,34 +5,51 @@
   if(isset($_SESSION['email']))
   {
 ?>
-    <h1>Vous ête déjà connecter, voulez vous vous <a href="<?php echo lien_vers_deconnexion(); ?>">déconnectez</a> ?</h1>
+    <h4 class="alert alert-info">Vous êtes déjà connecté, voulez-vous vous <a href="<?php echo lien_vers_deconnexion(); ?>">déconnecter</a> ?</h4>
 <?php
   }
   else
   {
 ?>
-    <form method='post'>
-    
-      <div class="wrapper">
-        <form class="form-signin" method="post">       
-          <h1>Se connecter</h1>
-          
-          <?php if(isset($erreur_connexion)) 
-          { ?>
-          	<h1 class="erreur"><?php echo $erreur_connexion; ?></h1>
-          <?php
-          } ?>
-          
-          <input type="text" class="form-control email-login-colocation" name="email" placeholder="Adresse email" required autofocus="" /><br>
-          <input type="password" class="form-control password-login-colocation" name="mdp" placeholder="Mot de passe" required/>      
-          <input type="hidden" name="connexion_personne" value="on" />
-          <label class="checkbox">
-          </label>
-          <button class="btn btn-primary" type="submit">Se connecter</button>
-        </form>
-      </div>
-    
-    <br><p class="text--center">Pas inscrit ? <a href="<?php echo lien_vers_inscription() ?>">S'inscrire maintenant</a> </use></p>
+<form method='post'>
+
+    <div class="container">
+        <div class="row" style="margin-top:20px">
+            <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+                <form role="form">
+                    <form class="form-signin" method="post">
+                        <fieldset>
+                            <h2>Se connecter</h2>
+
+                            <?php if(isset($erreur_connexion)) { ?>
+                            <h4 class="alert alert-danger"><?php echo $erreur_connexion; ?></h4>
+                            <?php } ?>
+                            <div class="form-group">
+                                <input type="text" class="form-control input-lg" name="email" placeholder="Adresse email" required autofocus="" />
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control input-lg" name="mdp" placeholder="Mot de passe" required/>
+                            </div>
+                            <input type="hidden" name="connexion_personne" value="on" />
+
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                    <button class="btn btn-lg btn-success btn-block" type="submit">Se connecter</button>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+
+                                </div>
+                                <a href="" class="btn btn-link pull-right">Mot de passe oublié ?</a>
+                            </div>
+                            <br>
+                            <p class="text--center">Pas inscrit ? <a href="<?php echo lien_vers_inscription() ?>">S'inscrire maintenant</a> </use>
+                            </p>
+                        </fieldset>
+                    </form>
+            </div>
+        </div>
+    </div>
+
 <?php
   }
 ?>
