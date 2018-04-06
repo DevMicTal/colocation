@@ -16,7 +16,7 @@ if(isset($_GET['connexion_reussi']) && $_GET['connexion_reussi'] == "oui")
 }
 if(isset($_SESSION['email']))
 {
-    echo "Voici votre tableau de bord, vous y trouverais vos dernieres annonces déposé.";
+    echo "<span class='color-white'>Voici votre tableau de bord, vous y trouverais vos dernières annonces déposés.</span>";
     echo "<h3>Vos annonces : </h3>";
     $annonces = recuperer_toutes_mes_annonces_logements();
     if($annonces == "Erreur: Aucune annonce disponible." || $annonces == "")

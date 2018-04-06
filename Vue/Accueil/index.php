@@ -17,7 +17,7 @@
 ?>
                 <div class="panel panel-default">
                         <div class="panel-heading"><?php echo $annonce['titre']; ?></div>
-                        <div class="panel-body"><p class="adresse"><?php echo $annonce['adresse']; ?>");</p>
+                        <div class="panel-body"><p class="adresse"><?php echo $annonce['adresse']; ?></p>
                         <p class="description"><?php echo substr($annonce['description'], 0, 200); ?> [...]</p>
                         <p class="surface=">Surface : <?php echo $annonce['surface']; ?>m²</p>
                         <p class="prix"><?php echo $annonce['prix']; ?>€</p>

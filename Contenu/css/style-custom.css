@@ -107,6 +107,9 @@ h2 {
 html {
   min-height: 100vh;
 }
+.color-white {
+  color: white;
+}
 /* FIN GENERAL */
 
 /* DEBUT FOOTER */
